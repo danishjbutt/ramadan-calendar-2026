@@ -1,10 +1,10 @@
 {
-  "name": "Ramadan 2026",
+  "name": "Ramadan 2027",
   "short_name": "Ramadan",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#f5f1e8",
+  "theme_color": "#132f2b",
   "icons": [
     {
       "src": "icon-192.png",
