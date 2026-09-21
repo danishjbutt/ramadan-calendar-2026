@@ -882,22 +882,23 @@ function renderTimeBoxes(topLabel, topTime, topCountdown, bottomLabel, bottomTim
   </div>`;
 }
 
-function renderDailyDua(day) {
+function renderDailyDua(day, isRamadanDay) {
  const card = document.getElementById("duaCard");
  const dua = DAILY_DUAS[day - 1];
  if (!dua) {
   card.style.display = "none";
   return;
  }
- document.getElementById("duaLabel").textContent = "Dua of the day · Ramadan " + day;
+ document.getElementById("duaLabel").textContent = isRamadanDay ? "Dua of the day · Ramadan " + day : "Dua of the day";
  document.getElementById("duaArabic").textContent = dua.arabic;
  document.getElementById("duaEnglish").textContent = dua.english;
  document.getElementById("duaReference").textContent = dua.reference;
  card.style.display = "block";
 }
 
-function hideDailyDua() {
- document.getElementById("duaCard").style.display = "none";
+function getDailyDuaNumber(date) {
+ const dayNumber = Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000);
+ return ((dayNumber % DAILY_DUAS.length) + DAILY_DUAS.length) % DAILY_DUAS.length + 1;
 }
 
 function updateDisplay() {
@@ -917,9 +918,9 @@ function updateDisplay() {
  const ramadanDayEl = document.getElementById("ramadanDay");
  if (todayData && todayData.day) {
   ramadanDayEl.innerText = "Ramadan day " + todayData.day + " of 30";
-  renderDailyDua(todayData.day);
+  renderDailyDua(todayData.day, true);
  } else {
-  hideDailyDua();
+  renderDailyDua(getDailyDuaNumber(now), false);
   const upcoming = ramadanData.find(r => r.date >= todayStr);
   if (upcoming) {
    const startDate = new Date(ramadanData[0].date + "T00:00:00");
@@ -1147,9 +1148,12 @@ document.getElementById("cityInput").addEventListener("keydown", function(e) {
  if (e.key === "Enter") { e.preventDefault(); searchCity(); }
 });
 
-if (localDateString() === "2027-03-10") {
+const initialDate = localDateString();
+if (initialDate === "2027-03-10") {
  startEidCelebration();
 } else {
+ const initialRamadanDay = RAMADAN_DATES.find(function(item) { return item.date === initialDate; });
+ renderDailyDua(initialRamadanDay ? initialRamadanDay.day : getDailyDuaNumber(new Date()), Boolean(initialRamadanDay));
  initApp();
 }
 </script>
