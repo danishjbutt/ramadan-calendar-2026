@@ -4,309 +4,118 @@
 <meta name="google-adsense-account" content="ca-pub-2239605898396507">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramadan 2026</title>
+<title>Ramadan 2027</title>
 
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0f172a">
+<meta name="theme-color" content="#132f2b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2239605898396507"
      crossorigin="anonymous"></script>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    background:#0f172a;
-    color:white;
-}
-
-h1 { margin-bottom:5px; }
-#locationName { font-size:14px; color:#94a3b8; margin-bottom:5px; }
-#ramadanDay { font-size:18px; color:#fbbf24; margin-top:4px; font-weight:bold; }
-
-.main-layout {
-    display:flex;
-    justify-content:center;
-     align-items:stretch;
-    gap:20px;
-    max-width:900px;
-    margin:10px auto;
-}
-
-.main-center { flex:1; min-width:0; }
-
-.time-boxes { max-width:320px; margin:10px auto; }
-
-.time-box {
-    background:#1e293b;
-    padding:25px;
-    border-radius:12px;
-    margin:10px auto;
-}
-
-.time-box .time { font-size:34px; font-weight:bold; }
-.time-box .countdown { font-size:16px; margin-top:8px; color:#facc15; font-weight:bold; }
-.time-box.next-event { background:#16a34a; }
-
-.namaz-panel {
-    background:#1e293b;
-    border-radius:12px;
-    padding:18px 16px;
-    width:220px;
-     min-width:180px;
-    max-width:220px;
-    text-align:left;
-box-sizing:border-box;
-}
-
-.namaz-panel h3 {
-    margin:0 0 12px 0;
-    text-align:center;
-    font-size:16px;
-    color:#facc15;
-}
-
-.namaz-table {
-    width:100%;
-    border-collapse:collapse;
-    display:table;
-}
-
-.namaz-table td {
-    padding:8px 6px;
-    border-bottom:1px solid #334155;
-    font-size:14px;
-}
-
-.namaz-table tr:last-child td {
-    border-bottom:none;
-}
-
-.namaz-table td:first-child {
-    color:#94a3b8;
-    font-weight:bold;
-}
-
-.namaz-table td:last-child {
-    text-align:right;
-    font-weight:bold;
-    color:#fff;
-}
-
-.namaz-table tr.active-namaz td {
-    color:#16a34a;
-}
-
-.timetable-panel {
-    background:#1e293b;
-    border-radius:12px;
-    padding:18px 16px;
-    width:220px;
-     min-width:180px;
-    max-width:220px;
-    text-align:left;
-box-sizing:border-box;
-}
-
-.timetable-panel h3 {
-    margin:0 0 12px 0;
-    text-align:center;
-    font-size:16px;
-    color:#facc15;
-}
-
-.timetable-scroll {
-    max-height:340px;
-    overflow-y:auto;
-}
-
-.timetable-scroll::-webkit-scrollbar {
-    width:4px;
-}
-
-.timetable-scroll::-webkit-scrollbar-track {
-    background:#0f172a;
-    border-radius:4px;
-}
-
-.timetable-scroll::-webkit-scrollbar-thumb {
-    background:#475569;
-    border-radius:4px;
-}
-
-.timetable-scroll::-webkit-scrollbar-thumb:hover {
-    background:#64748b;
-}
-
-.timetable-table {
-    width:100%;
-    border-collapse:collapse;
-    display:table;
-}
-
-.timetable-table th {
-    padding:6px 4px;
-    font-size:11px;
-    color:#64748b;
-    text-align:left;
-    border-bottom:1px solid #334155;
-}
-
-.timetable-table th:last-child,
-.timetable-table th:nth-child(2) {
-    text-align:right;
-}
-
-.timetable-table td {
-    padding:8px 4px;
-    border-bottom:1px solid #334155;
-    font-size:13px;
-}
-
-.timetable-table tr:last-child td {
-    border-bottom:none;
-}
-
-.timetable-table td:first-child {
-    color:#94a3b8;
-    font-weight:bold;
-}
-
-.timetable-table td:nth-child(2),
-.timetable-table td:last-child {
-    text-align:right;
-    font-weight:bold;
-    color:#fff;
-}
-
-.timetable-table tr.highlight td {
-    color:#16a34a;
-}
-
-.scroll-hint {
-    text-align:center;
-    font-size:11px;
-    color:#64748b;
-    margin-top:8px;
-}
-
-button {
-    padding:10px 18px;
-    border:none;
-    border-radius:8px;
-    background:#334155;
-    color:white;
-    cursor:pointer;
-}
-
-#loading { font-size:16px; color:#facc15; margin:30px 0; }
-
-#refreshLocation, #enterLocationBtn {
-    background:none;
-    border:none;
-    color:#94a3b8;
-    font-size:12px;
-    cursor:pointer;
-    padding:2px 6px;
-    text-decoration:underline;
-}
-#refreshLocation:hover, #enterLocationBtn:hover { color:#facc15; }
-
-#locationControls {
-    margin:8px auto;
-    max-width:360px;
-}
-
-#manualLocationForm {
-    display:none;
-    margin:8px auto;
-    max-width:360px;
-}
-
-#manualLocationForm .search-row {
-    display:flex;
-    gap:6px;
-}
-
-#manualLocationForm input[type="text"] {
-    flex:1;
-    padding:8px 12px;
-    border-radius:8px;
-    border:1px solid #334155;
-    background:#1e293b;
-    color:white;
-    font-size:14px;
-    outline:none;
-}
-
-#manualLocationForm input[type="text"]:focus {
-    border-color:#facc15;
-}
-
-#manualLocationForm button {
-    padding:8px 14px;
-    font-size:13px;
-    white-space:nowrap;
-}
-
-#locationError {
-    color:#f87171;
-    font-size:12px;
-    margin-top:6px;
-    display:none;
-}
-
-#locationResults {
-    list-style:none;
-    padding:0;
-    margin:6px 0 0 0;
-    text-align:left;
-}
-
-#locationResults li {
-    padding:8px 12px;
-    background:#1e293b;
-    border:1px solid #334155;
-    border-radius:6px;
-    margin-bottom:4px;
-    cursor:pointer;
-    font-size:13px;
-    color:#e2e8f0;
-}
-
-#locationResults li:hover {
-    background:#334155;
-    border-color:#facc15;
-}
-
-
-@media (max-width: 600px) {
-    .main-layout {
-        flex-direction:column;
-        align-items:center;
-    }
-    .main-center {
-        order:-1;
-    }
-    .namaz-panel,
-    .timetable-panel {
-        max-width:320px;
-        width:100%;
-    }
-}
+:root { --ink:#18332f; --muted:#71817c; --cream:#f5f1e8; --paper:#fffdf8; --green:#235f53; --green-dark:#163f38; --gold:#c79a45; --line:#e5dfd2; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; font-family:"DM Sans",sans-serif; color:var(--ink); background:var(--cream); }
+body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.36; background-image:linear-gradient(30deg,rgba(35,95,83,.035) 12%,transparent 12.5%,transparent 87%,rgba(35,95,83,.035) 87.5%),linear-gradient(150deg,rgba(35,95,83,.035) 12%,transparent 12.5%,transparent 87%,rgba(35,95,83,.035) 87.5%); background-size:48px 84px; }
+button,input { font:inherit; }
+button { border:0; cursor:pointer; }
+.app-shell { position:relative; width:min(1400px,calc(100% - 64px)); margin:0 auto; padding:28px 0 54px; }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:28px; padding:8px 0 28px; border-bottom:1px solid rgba(24,51,47,.14); }
+.brand { display:flex; align-items:center; gap:14px; min-width:max-content; }
+.brand-mark { display:grid; place-items:center; width:44px; height:44px; border-radius:14px; color:#fff; background:var(--green); box-shadow:0 10px 24px rgba(35,95,83,.18); }
+.brand-mark svg { width:24px; height:24px; }
+h1 { margin:0; font:700 20px/1.1 "Playfair Display",serif; letter-spacing:-.02em; }
+.brand small { display:block; margin-top:4px; color:var(--muted); font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+.location-area { display:flex; align-items:center; justify-content:flex-end; gap:12px; flex-wrap:wrap; }
+#locationName { color:var(--ink); font-size:14px; font-weight:600; }
+#locationName::before { content:""; display:inline-block; width:7px; height:7px; margin-right:8px; border-radius:50%; background:var(--gold); }
+#locationControls { display:none; }
+#refreshLocation,#enterLocationBtn { padding:9px 13px; border:1px solid var(--line); border-radius:999px; color:var(--green-dark); background:rgba(255,253,248,.72); font-size:12px; font-weight:700; transition:.2s ease; }
+#refreshLocation:hover,#enterLocationBtn:hover { border-color:var(--green); background:#fff; transform:translateY(-1px); }
+#installAppBtn { display:inline-flex; align-items:center; gap:7px; padding:9px 14px; border-radius:999px; color:#fff; background:var(--green); font-size:12px; font-weight:700; box-shadow:0 8px 20px rgba(35,95,83,.14); transition:.2s ease; }
+#installAppBtn:hover { background:var(--green-dark); transform:translateY(-1px); }
+#installAppBtn svg { width:14px; height:14px; }
+#installAppBtn.is-installed { color:var(--green); background:#e8f0ec; box-shadow:none; cursor:default; }
+#installHelp { width:100%; color:var(--muted); font-size:11px; text-align:right; }
+.divider { display:none; }
+#manualLocationForm { display:none; position:absolute; z-index:5; right:0; top:94px; width:min(430px,100%); padding:16px; border:1px solid var(--line); border-radius:18px; background:var(--paper); box-shadow:0 24px 70px rgba(25,55,49,.16); }
+.search-row { display:flex; gap:8px; }
+#manualLocationForm input { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:11px; outline:none; color:var(--ink); background:#fff; }
+#manualLocationForm input:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(35,95,83,.1); }
+#manualLocationForm .search-row button { padding:0 18px; border-radius:11px; color:#fff; background:var(--green); font-weight:700; }
+#locationError { display:none; margin-top:9px; color:#a8463d; font-size:12px; }
+#locationResults { list-style:none; padding:0; margin:8px 0 0; text-align:left; }
+#locationResults li { padding:11px 12px; margin-top:5px; border-radius:9px; color:var(--ink); background:#f7f4ed; font-size:12px; cursor:pointer; }
+#locationResults li:hover { background:#ece7da; }
+.hero { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr); gap:40px; align-items:end; padding:58px 4px 40px; }
+.eyebrow { margin:0 0 13px; color:var(--green); font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+.hero-title { max-width:740px; margin:0; font:600 clamp(40px,5.5vw,74px)/.98 "Playfair Display",serif; letter-spacing:-.045em; }
+.hero-copy { max-width:460px; margin:0 0 4px auto; color:var(--muted); font-size:15px; line-height:1.7; }
+.date-line { display:flex; gap:10px; align-items:center; margin-top:22px; color:var(--muted); font-size:14px; }
+#ramadanDay { color:var(--green); font-weight:700; }
+.date-dot { color:var(--gold); }
+#loading { margin:40px 0; padding:36px; border:1px solid var(--line); border-radius:22px; text-align:center; color:var(--green); background:var(--paper); font-weight:600; }
+.main-layout { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(310px,.7fr); grid-template-areas:"center prayer" "table table"; gap:24px; }
+.main-center { grid-area:center; min-width:0; }
+.time-boxes { display:grid; grid-template-columns:1.2fr .8fr; gap:18px; height:100%; }
+.time-box { position:relative; min-height:250px; padding:34px; overflow:hidden; border:1px solid var(--line); border-radius:26px; background:var(--paper); box-shadow:0 14px 38px rgba(47,67,58,.06); }
+.time-box::after { content:""; position:absolute; right:-38px; bottom:-54px; width:150px; height:150px; border:1px solid currentColor; border-radius:50%; opacity:.1; }
+.time-box h3 { margin:0; font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.time-box .time { position:absolute; left:34px; bottom:48px; font:600 clamp(44px,6vw,72px)/1 "Playfair Display",serif; letter-spacing:-.04em; }
+.time-box .countdown { position:absolute; left:36px; bottom:25px; color:rgba(255,255,255,.75); font-size:13px; font-weight:600; font-variant-numeric:tabular-nums; }
+.time-box.next-event { border-color:transparent; color:#fff; background:var(--green); box-shadow:0 18px 42px rgba(35,95,83,.2); }
+.namaz-panel,.timetable-panel { padding:28px; border:1px solid var(--line); border-radius:26px; background:var(--paper); box-shadow:0 14px 38px rgba(47,67,58,.05); }
+.namaz-panel { grid-area:prayer; }
+.timetable-panel { grid-area:table; }
+.panel-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; margin-bottom:19px; }
+.panel-heading h3 { margin:0; font:600 21px/1.2 "Playfair Display",serif; }
+#methodLabel { color:var(--muted)!important; font-size:11px!important; }
+.namaz-table,.timetable-table { width:100%; border-collapse:collapse; }
+.namaz-table td { padding:12px 4px; border-bottom:1px solid var(--line); font-size:14px; }
+.namaz-table tr:last-child td,.timetable-table tr:last-child td { border-bottom:0; }
+.namaz-table td:first-child { color:var(--muted); }
+.namaz-table td:last-child { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; }
+.namaz-table tr.active-namaz td { color:var(--green); font-weight:700; }
+.timetable-scroll { max-height:390px; overflow:auto; scrollbar-color:#b9c2ba transparent; scrollbar-width:thin; }
+.timetable-table { min-width:560px; }
+.timetable-table th { position:sticky; top:0; z-index:1; padding:11px 16px; border-bottom:1px solid var(--line); color:var(--muted); background:var(--paper); font-size:11px; letter-spacing:.12em; text-align:left; text-transform:uppercase; }
+.timetable-table td { padding:13px 16px; border-bottom:1px solid var(--line); color:var(--ink); font-size:14px; font-variant-numeric:tabular-nums; }
+.timetable-table th:nth-child(n+2),.timetable-table td:nth-child(n+2) { text-align:right; }
+.timetable-table td:first-child { color:var(--muted); font-weight:600; }
+.timetable-table td:nth-child(n+2) { font-weight:700; }
+.timetable-table tr.highlight td { color:var(--green); background:#edf3ef; }
+.scroll-hint { margin-top:12px; text-align:center; color:var(--muted); font-size:11px; }
+.dua-panel { position:relative; display:grid; grid-template-columns:210px minmax(0,1fr); gap:38px; margin-top:24px; padding:38px 42px; overflow:hidden; border-radius:26px; color:#fff; background:var(--green-dark); box-shadow:0 18px 42px rgba(22,63,56,.15); }
+.dua-panel::after { content:""; position:absolute; right:-90px; top:-110px; width:300px; height:300px; border:1px solid rgba(255,255,255,.1); border-radius:50%; box-shadow:0 0 0 48px rgba(255,255,255,.025),0 0 0 96px rgba(255,255,255,.02); }
+.dua-label { position:relative; z-index:1; }
+.dua-label .eyebrow { color:#d9b96d; }
+.dua-label h3 { margin:0; font:600 25px/1.2 "Playfair Display",serif; }
+.dua-content { position:relative; z-index:1; padding-left:38px; border-left:1px solid rgba(255,255,255,.16); }
+.dua-arabic { margin:0 0 16px; font:500 clamp(26px,3vw,36px)/1.8 serif; text-align:right; direction:rtl; }
+.dua-translation { margin:0; max-width:780px; color:rgba(255,255,255,.76); font-size:14px; line-height:1.7; }
+.dua-source { display:block; margin-top:13px; color:#d9b96d; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+@media (max-width:900px) { .app-shell{width:min(100% - 36px,720px)} .topbar{align-items:flex-start} .location-area{max-width:380px} .hero{grid-template-columns:1fr;gap:20px;padding-top:44px} .hero-copy{margin:0} .main-layout{grid-template-columns:1fr;grid-template-areas:"center" "prayer" "table"} }
+@media (max-width:900px) { .dua-panel{grid-template-columns:1fr;gap:24px}.dua-content{padding:24px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.16)} }
+@media (max-width:620px) { .app-shell{width:min(100% - 24px,520px);padding-top:14px} .topbar{display:block}.location-area{justify-content:flex-start;margin-top:18px}.brand small{display:none} #installHelp{text-align:left} #manualLocationForm{top:168px}.hero{padding:38px 2px 28px}.hero-title{font-size:42px}.date-line{align-items:flex-start;flex-wrap:wrap}.time-boxes{grid-template-columns:1fr}.time-box{min-height:210px;padding:26px}.time-box .time{left:26px;bottom:45px}.time-box .countdown{left:28px;bottom:22px}.namaz-panel,.timetable-panel{padding:22px 18px;border-radius:21px}.dua-panel{padding:28px 24px;border-radius:21px}.dua-arabic{font-size:27px} }
+@media (prefers-reduced-motion:reduce) { *{scroll-behavior:auto!important;transition:none!important} }
 </style>
 </head>
 <body>
-
-<h1 id="heading">🌙 Ramadan 2026</h1>
-<div id="locationName"></div>
-<div id="locationControls" style="display:none">
+<main class="app-shell">
+<header class="topbar">
+ <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M18.5 15.5A8 8 0 0 1 8.5 5.5a8 8 0 1 0 10 10Z" fill="currentColor"/><path d="m17 5 .55 1.45L19 7l-1.45.55L17 9l-.55-1.45L15 7l1.45-.55L17 5Z" fill="#d9b96d"/></svg></span><div><h1 id="heading">Ramadan 2027</h1><small>Daily prayer companion</small></div></div>
+ <div class="location-area"><div id="locationName"></div>
+<button id="installAppBtn" type="button"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Install app</span></button>
+<div id="locationControls">
  <button id="refreshLocation" onclick="refreshLocation()">Update location</button>
- <span style="color:#475569;margin:0 4px;">|</span>
+ <span class="divider">|</span>
  <button id="enterLocationBtn" onclick="toggleManualEntry()">Enter city manually</button>
-</div>
+</div><div id="installHelp" role="status" aria-live="polite"></div></div>
+</header>
 <div id="manualLocationForm">
  <div class="search-row">
   <input type="text" id="cityInput" placeholder="e.g. London, Karachi, New York" autocomplete="off">
@@ -315,77 +124,147 @@ button {
  <div id="locationError"></div>
  <ul id="locationResults"></ul>
 </div>
-<div id="currentDate"></div>
-<div id="ramadanDay"></div>
+<section class="hero">
+ <div><p class="eyebrow">Your fasting day, at a glance</p><h2 class="hero-title">A calmer way to follow Ramadan.</h2><div class="date-line"><span id="currentDate"></span><span class="date-dot">&#9670;</span><span id="ramadanDay"></span></div></div>
+ <p class="hero-copy">Accurate Sehri, Iftar and local prayer times, thoughtfully arranged around your day and your location.</p>
+</section>
 
 <div id="loading">Detecting your location...</div>
 
 <div class="main-layout">
  <div class="timetable-panel" id="timetablePanel" style="display:none">
-  <h3>📅 Ramadan Timetable</h3>
+  <div class="panel-heading"><h3>Ramadan timetable</h3><span class="eyebrow">30 days</span></div>
   <div class="timetable-scroll" id="timetableScroll">
    <table class="timetable-table" id="timetableTable">
     <thead>
-     <tr><th>Day</th><th>Sehri</th><th>Aftar</th></tr>
+     <tr><th>Day</th><th>Sehri</th><th>Iftar</th></tr>
     </thead>
     <tbody></tbody>
    </table>
   </div>
-  <div class="scroll-hint" id="scrollHint">↕ Scroll for more</div>
+  <div class="scroll-hint" id="scrollHint">Scroll to see all days</div>
  </div>
  <div class="main-center">
   <div class="time-boxes" id="timeBoxes"></div>
  </div>
  <div class="namaz-panel" id="namazPanel" style="display:none">
-  <h3>🕌 Local Prayer Times</h3>
-  <div id="methodLabel" style="text-align:center;font-size:11px;color:#64748b;margin:-8px 0 10px 0;"></div>
+  <div class="panel-heading"><h3>Prayer times</h3><div id="methodLabel"></div></div>
   <table class="namaz-table" id="namazTable">
    <tbody></tbody>
   </table>
  </div>
 </div>
+<section class="dua-panel" id="duaPanel">
+ <div class="dua-label"><p class="eyebrow" id="duaDayLabel">Dua of the day</p><h3>A moment for reflection</h3></div>
+ <div class="dua-content"><p class="dua-arabic" id="duaArabic" lang="ar"></p><p class="dua-translation" id="duaTranslation"></p><span class="dua-source" id="duaSource"></span></div>
+</section>
+</main>
 
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js');
 }
 
+var deferredInstallPrompt = null;
+var installButton = document.getElementById("installAppBtn");
+var installHelp = document.getElementById("installHelp");
+var isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+
+function setInstalledState() {
+ installButton.classList.add("is-installed");
+ installButton.querySelector("span").textContent = "App installed";
+ installButton.disabled = true;
+ installHelp.textContent = "";
+}
+
+if (isStandalone) setInstalledState();
+
+window.addEventListener("beforeinstallprompt", function(event) {
+ event.preventDefault();
+ deferredInstallPrompt = event;
+ installButton.hidden = false;
+ installHelp.textContent = "Ready to install for quick access.";
+});
+
+window.addEventListener("appinstalled", function() {
+ deferredInstallPrompt = null;
+ setInstalledState();
+});
+
+installButton.addEventListener("click", async function() {
+ if (deferredInstallPrompt) {
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  installHelp.textContent = "You can install again from your browser menu.";
+  return;
+ }
+ var isiOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+ installHelp.textContent = isiOS
+  ? "In Safari, tap Share, then Add to Home Screen."
+  : "Open your browser menu and choose Install app or Add to Home screen.";
+});
+
+const dailyDuas = [
+ { arabic:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ", translation:"Our Lord, grant us good in this world and good in the Hereafter, and protect us from the torment of the Fire.", source:"Qur'an 2:201" },
+ { arabic:"رَبِّ زِدْنِي عِلْمًا", translation:"My Lord, increase me in knowledge.", source:"Qur'an 20:114" },
+ { arabic:"لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ", translation:"There is no deity except You. Glory be to You; indeed, I have been among the wrongdoers.", source:"Qur'an 21:87" },
+ { arabic:"رَبِّ اغْفِرْ وَارْحَمْ وَأَنْتَ خَيْرُ الرَّاحِمِينَ", translation:"My Lord, forgive and have mercy, for You are the best of those who show mercy.", source:"Qur'an 23:118" },
+ { arabic:"رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً", translation:"Our Lord, do not let our hearts deviate after You have guided us. Grant us mercy from Yourself.", source:"Qur'an 3:8" },
+ { arabic:"رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا", translation:"Our Lord, bless us with spouses and offspring who are the joy of our hearts, and make us examples for the mindful.", source:"Qur'an 25:74" },
+ { arabic:"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ", translation:"Allah is sufficient for us, and He is the best Guardian.", source:"Qur'an 3:173" },
+ { arabic:"رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ", translation:"Our Lord, we have wronged ourselves. If You do not forgive us and have mercy upon us, we will surely be among the losers.", source:"Qur'an 7:23" },
+ { arabic:"رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ", translation:"My Lord, I am truly in need of whatever good You send down to me.", source:"Qur'an 28:24" },
+ { arabic:"رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ", translation:"Our Lord, pour upon us patience and let us die in submission to You.", source:"Qur'an 7:126" },
+ { arabic:"اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي", translation:"O Allah, You are Pardoning and You love to pardon, so pardon me.", source:"Jami' at-Tirmidhi 3513" },
+ { arabic:"رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ", translation:"Our Lord, accept this from us. You are truly the All-Hearing, All-Knowing.", source:"Qur'an 2:127" }
+];
+
+function renderDailyDua(dayNumber) {
+ var safeDay = Math.max(1, Math.min(30, dayNumber || 1));
+ var dua = dailyDuas[(safeDay - 1) % dailyDuas.length];
+ document.getElementById("duaDayLabel").textContent = "Dua of the day · Day " + safeDay;
+ document.getElementById("duaArabic").textContent = dua.arabic;
+ document.getElementById("duaTranslation").textContent = dua.translation;
+ document.getElementById("duaSource").textContent = dua.source;
+}
+
 const fallbackData = [
-{day:1,date:"2026-02-18",sehri:"05:29",aftar:"17:26"},
-{day:2,date:"2026-02-19",sehri:"05:27",aftar:"17:28"},
-{day:3,date:"2026-02-20",sehri:"05:25",aftar:"17:30"},
-{day:4,date:"2026-02-21",sehri:"05:23",aftar:"17:31"},
-{day:5,date:"2026-02-22",sehri:"05:21",aftar:"17:33"},
-{day:6,date:"2026-02-23",sehri:"05:19",aftar:"17:35"},
-{day:7,date:"2026-02-24",sehri:"05:17",aftar:"17:37"},
-{day:8,date:"2026-02-25",sehri:"05:14",aftar:"17:39"},
-{day:9,date:"2026-02-26",sehri:"05:12",aftar:"17:40"},
-{day:10,date:"2026-02-27",sehri:"05:10",aftar:"17:42"},
-{day:11,date:"2026-02-28",sehri:"05:08",aftar:"17:44"},
-{day:12,date:"2026-03-01",sehri:"05:06",aftar:"17:46"},
-{day:13,date:"2026-03-02",sehri:"05:04",aftar:"17:47"},
-{day:14,date:"2026-03-03",sehri:"05:02",aftar:"17:49"},
-{day:15,date:"2026-03-04",sehri:"04:59",aftar:"17:51"},
-{day:16,date:"2026-03-05",sehri:"04:57",aftar:"17:53"},
-{day:17,date:"2026-03-06",sehri:"04:55",aftar:"17:54"},
-{day:18,date:"2026-03-07",sehri:"04:53",aftar:"17:56"},
-{day:19,date:"2026-03-08",sehri:"04:51",aftar:"17:58"},
-{day:20,date:"2026-03-09",sehri:"04:48",aftar:"18:00"},
-{day:21,date:"2026-03-10",sehri:"04:46",aftar:"18:01"},
-{day:22,date:"2026-03-11",sehri:"04:44",aftar:"18:03"},
-{day:23,date:"2026-03-12",sehri:"04:42",aftar:"18:05"},
-{day:24,date:"2026-03-13",sehri:"04:39",aftar:"18:06"},
-{day:25,date:"2026-03-14",sehri:"04:37",aftar:"18:08"},
-{day:26,date:"2026-03-15",sehri:"04:35",aftar:"18:10"},
-{day:27,date:"2026-03-16",sehri:"04:33",aftar:"18:12"},
-{day:28,date:"2026-03-17",sehri:"04:30",aftar:"18:13"},
-{day:29,date:"2026-03-18",sehri:"04:28",aftar:"18:14"},
-{day:30,date:"2026-03-19",sehri:"04:26",aftar:"18:15"},
+{day:1,date:"2027-02-08",sehri:"05:50",aftar:"17:01"},
+{day:2,date:"2027-02-09",sehri:"05:49",aftar:"17:03"},
+{day:3,date:"2027-02-10",sehri:"05:47",aftar:"17:05"},
+{day:4,date:"2027-02-11",sehri:"05:45",aftar:"17:07"},
+{day:5,date:"2027-02-12",sehri:"05:43",aftar:"17:09"},
+{day:6,date:"2027-02-13",sehri:"05:41",aftar:"17:10"},
+{day:7,date:"2027-02-14",sehri:"05:39",aftar:"17:12"},
+{day:8,date:"2027-02-15",sehri:"05:37",aftar:"17:14"},
+{day:9,date:"2027-02-16",sehri:"05:37",aftar:"17:16"},
+{day:10,date:"2027-02-17",sehri:"05:35",aftar:"17:18"},
+{day:11,date:"2027-02-18",sehri:"05:33",aftar:"17:20"},
+{day:12,date:"2027-02-19",sehri:"05:31",aftar:"17:21"},
+{day:13,date:"2027-02-20",sehri:"05:29",aftar:"17:23"},
+{day:14,date:"2027-02-21",sehri:"05:27",aftar:"17:25"},
+{day:15,date:"2027-02-22",sehri:"05:25",aftar:"17:27"},
+{day:16,date:"2027-02-23",sehri:"05:22",aftar:"17:29"},
+{day:17,date:"2027-02-24",sehri:"05:20",aftar:"17:30"},
+{day:18,date:"2027-02-25",sehri:"05:18",aftar:"17:32"},
+{day:19,date:"2027-02-26",sehri:"05:16",aftar:"17:34"},
+{day:20,date:"2027-02-27",sehri:"05:15",aftar:"17:36"},
+{day:21,date:"2027-02-28",sehri:"05:13",aftar:"17:38"},
+{day:22,date:"2027-03-01",sehri:"05:11",aftar:"17:39"},
+{day:23,date:"2027-03-02",sehri:"05:09",aftar:"17:41"},
+{day:24,date:"2027-03-03",sehri:"05:06",aftar:"17:43"},
+{day:25,date:"2027-03-04",sehri:"05:04",aftar:"17:45"},
+{day:26,date:"2027-03-05",sehri:"05:02",aftar:"17:46"},
+{day:27,date:"2027-03-06",sehri:"05:00",aftar:"17:48"},
+{day:28,date:"2027-03-07",sehri:"04:58",aftar:"17:50"},
+{day:29,date:"2027-03-08",sehri:"04:55",aftar:"17:52"},
+{day:30,date:"2027-03-09",sehri:"04:54",aftar:"17:53"},
 ];
 
 const RAMADAN_DATES = [];
 (function() {
- const start = new Date(2026, 1, 18);
+ const start = new Date(2027, 1, 8);
  for (let i = 0; i < 30; i++) {
   const d = new Date(start);
   d.setDate(d.getDate() + i);
@@ -487,8 +366,8 @@ async function fetchLocationInfo(lat, lng) {
 async function fetchPrayerTimes(lat, lng, method) {
  var m = method || 3;
  const [febResp, marResp] = await Promise.all([
-  fetch("https://api.aladhan.com/v1/calendar/2026/2?latitude=" + lat + "&longitude=" + lng + "&method=" + m),
-  fetch("https://api.aladhan.com/v1/calendar/2026/3?latitude=" + lat + "&longitude=" + lng + "&method=" + m)
+  fetch("https://api.aladhan.com/v1/calendar/2027/2?latitude=" + lat + "&longitude=" + lng + "&method=" + m),
+  fetch("https://api.aladhan.com/v1/calendar/2027/3?latitude=" + lat + "&longitude=" + lng + "&method=" + m)
  ]);
 
  const febJson = await febResp.json();
@@ -577,7 +456,7 @@ function renderNamazTimes() {
 
 function getCachedLocation() {
  try {
-  var cached = localStorage.getItem("ramadan2026_location");
+  var cached = localStorage.getItem("ramadan2027_location");
   if (!cached) return null;
   var data = JSON.parse(cached);
   // Cache is valid for 24 hours
@@ -588,7 +467,7 @@ function getCachedLocation() {
 
 function setCachedLocation(lat, lng, city, countryCode) {
  try {
-  localStorage.setItem("ramadan2026_location", JSON.stringify({
+  localStorage.setItem("ramadan2027_location", JSON.stringify({
    lat: lat, lng: lng, city: city, countryCode: countryCode, timestamp: Date.now()
   }));
  } catch (e) {}
@@ -596,7 +475,7 @@ function setCachedLocation(lat, lng, city, countryCode) {
 
 function getCachedPrayerTimes() {
  try {
-  var cached = localStorage.getItem("ramadan2026_prayers");
+  var cached = localStorage.getItem("ramadan2027_prayers");
   if (!cached) return null;
   var data = JSON.parse(cached);
   // Cache is valid for 12 hours
@@ -607,7 +486,7 @@ function getCachedPrayerTimes() {
 
 function setCachedPrayerTimes(prayerTimes, timings) {
  try {
-  localStorage.setItem("ramadan2026_prayers", JSON.stringify({
+  localStorage.setItem("ramadan2027_prayers", JSON.stringify({
    ramadanData: prayerTimes, todayTimings: timings, timestamp: Date.now()
   }));
  } catch (e) {}
@@ -615,8 +494,8 @@ function setCachedPrayerTimes(prayerTimes, timings) {
 
 function clearCache() {
  try {
-  localStorage.removeItem("ramadan2026_location");
-  localStorage.removeItem("ramadan2026_prayers");
+  localStorage.removeItem("ramadan2027_location");
+  localStorage.removeItem("ramadan2027_prayers");
  } catch (e) {}
 }
 
@@ -686,9 +565,9 @@ async function initApp(forceRefresh) {
    setCachedPrayerTimes(ramadanData, todayTimings);
   }
 
-  document.getElementById("heading").textContent = "\uD83C\uDF19 Ramadan 2026 - " + cityName;
-  document.getElementById("locationName").textContent = "\uD83D\uDCCD " + cityName;
-  document.title = "Ramadan 2026 - " + cityName;
+  document.getElementById("heading").textContent = "Ramadan 2027";
+  document.getElementById("locationName").textContent = cityName;
+  document.title = "Ramadan 2027 - " + cityName;
 
  } catch (err) {
   console.log("Using fallback data:", err.message || err);
@@ -696,9 +575,9 @@ async function initApp(forceRefresh) {
   activeMethod = 15;
   lat = 51.6255;
   lng = 0.0755;
-  document.getElementById("heading").textContent = "\uD83C\uDF19 Ramadan 2026 - Chigwell";
-  document.getElementById("locationName").textContent = "\uD83D\uDCCD Chigwell (default)";
-  document.title = "Ramadan 2026 - Chigwell";
+  document.getElementById("heading").textContent = "Ramadan 2027";
+  document.getElementById("locationName").textContent = "Chigwell (default)";
+  document.title = "Ramadan 2027 - Chigwell";
   ramadanData = fallbackData;
   todayTimings = fallbackTimings;
  }
@@ -785,7 +664,7 @@ function renderTimeBoxes(topLabel, topTime, topCountdown, bottomLabel, bottomTim
   <div class="time-box next-event">
    <h3>${topLabel}</h3>
    <div class="time">${topTime}</div>
-   <div class="countdown">⏳ ${topCountdown}</div>
+   <div class="countdown">${topCountdown}</div>
   </div>
   <div class="time-box">
    <h3>${bottomLabel}</h3>
@@ -812,10 +691,17 @@ function updateDisplay() {
    const startDate = new Date(ramadanData[0].date + "T00:00:00");
    const diffDays = Math.ceil((startDate - now) / (1000 * 60 * 60 * 24));
    ramadanDayEl.innerText = "Ramzan starts in " + diffDays + " day" + (diffDays !== 1 ? "s" : "");
-  } else {
+ } else {
    ramadanDayEl.innerText = "";
   }
  }
+
+ var duaDay = todayData ? todayData.day : 1;
+ if (!todayData) {
+  var nextRamadanDay = ramadanData.find(r => r.date >= todayStr);
+  duaDay = nextRamadanDay ? nextRamadanDay.day : 30;
+ }
+ renderDailyDua(duaDay);
 
  if (todayData) {
   const sehriTime = parseTime(todayStr, todayData.sehri);
@@ -826,7 +712,7 @@ function updateDisplay() {
    const diff = sehriTime - now;
    renderTimeBoxes(
     "Sehri Ends In", todayData.sehri, formatCountdown(diff),
-    "Today's Aftar", todayData.aftar
+    "Today's Iftar", todayData.aftar
    );
   } else if (now < aftarTime) {
    // After Sehri, before Aftar: Aftar on top with countdown, next Sehri below
@@ -834,7 +720,7 @@ function updateDisplay() {
    const nextSehriLabel = tomorrowData ? "Tomorrow's Sehri" : "Today's Sehri";
    const nextSehriTime = tomorrowData ? tomorrowData.sehri : todayData.sehri;
    renderTimeBoxes(
-    "Aftar In", todayData.aftar, formatCountdown(diff),
+    "Iftar In", todayData.aftar, formatCountdown(diff),
     nextSehriLabel, nextSehriTime
    );
   } else {
@@ -844,12 +730,12 @@ function updateDisplay() {
     const diff = nextSehri - now;
     renderTimeBoxes(
      "Next Sehri In", tomorrowData.sehri, formatCountdown(diff),
-     "Tomorrow's Aftar", tomorrowData.aftar
+     "Tomorrow's Iftar", tomorrowData.aftar
     );
    } else {
     // Last day of Ramadan, after Aftar - no more data
     renderTimeBoxes(
-     "Ramadan Complete", "🎉", "Eid Mubarak!",
+     "Ramadan Complete", "Eid", "Eid Mubarak",
      "May Allah accept", "your fasts"
     );
    }
@@ -862,12 +748,12 @@ function updateDisplay() {
    const diff = nextSehri - now;
    renderTimeBoxes(
     "Next Sehri (Day " + upcoming.day + ")", upcoming.sehri, formatCountdown(diff),
-    "Next Aftar (Day " + upcoming.day + ")", upcoming.aftar
+    "Next Iftar (Day " + upcoming.day + ")", upcoming.aftar
    );
   } else {
    // Ramadan is over
    renderTimeBoxes(
-    "Ramadan 2026", "Complete", "Eid Mubarak! 🎉",
+    "Ramadan 2027", "Complete", "Eid Mubarak",
     "May Allah accept", "your fasts"
    );
   }
@@ -959,9 +845,9 @@ async function selectManualLocation(place) {
   console.log("Error fetching prayer times for manual location:", e.message || e);
  }
 
- document.getElementById("heading").textContent = "\uD83C\uDF19 Ramadan 2026 - " + city;
- document.getElementById("locationName").textContent = "\uD83D\uDCCD " + city;
- document.title = "Ramadan 2026 - " + city;
+ document.getElementById("heading").textContent = "Ramadan 2027";
+ document.getElementById("locationName").textContent = city;
+ document.title = "Ramadan 2027 - " + city;
  document.getElementById("loading").style.display = "none";
 
  buildTable();
