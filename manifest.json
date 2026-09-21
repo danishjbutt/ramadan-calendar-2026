@@ -1,20 +1,29 @@
 {
-  "name": "Ramadan 2026",
-  "short_name": "Ramadan",
-  "start_url": "index.html",
+  "name": "Ramzan Calendar - 2027",
+  "short_name": "Ramzan 2027",
+  "description": "Local prayer times, daily duas, and Suhoor and Iftar countdowns for Ramzan 2027.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "orientation": "any",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["lifestyle", "utilities"],
+  "background_color": "#0b1715",
+  "theme_color": "#0b1715",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
