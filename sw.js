@@ -1,10 +1,10 @@
-const CACHE_NAME = "ramadan-cache-v10";
+const CACHE_NAME = "ramadan-cache-v11";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(["index.html"]);
+      return cache.addAll(["/", "index.html", "manifest.json", "icon-192.png", "icon-512.png"]);
     })
   );
 });
