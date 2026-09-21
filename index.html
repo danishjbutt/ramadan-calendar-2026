@@ -7,6 +7,10 @@
 <title>Ramadan 2026</title>
 
 <link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ramadan">
 <meta name="theme-color" content="#0f172a">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2239605898396507"
@@ -281,6 +285,62 @@ button {
     border-color:#facc15;
 }
 
+.ios-install-guide {
+    display:none;
+    position:relative;
+    max-width:520px;
+    margin:12px auto 18px;
+    padding:16px 44px 16px 18px;
+    box-sizing:border-box;
+    text-align:left;
+    background:linear-gradient(135deg, #1e293b, #172033);
+    border:1px solid #475569;
+    border-left:4px solid #facc15;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(2, 6, 23, .28);
+}
+
+.ios-install-guide.visible { display:block; }
+
+.ios-install-guide strong {
+    display:block;
+    margin-bottom:6px;
+    color:#facc15;
+    font-size:16px;
+}
+
+.ios-install-guide p {
+    margin:0;
+    color:#e2e8f0;
+    font-size:14px;
+    line-height:1.55;
+}
+
+.share-icon {
+    display:inline-flex;
+    width:20px;
+    height:20px;
+    margin:0 3px;
+    vertical-align:-5px;
+    color:#60a5fa;
+}
+
+.ios-install-close {
+    position:absolute;
+    top:8px;
+    right:8px;
+    width:34px;
+    height:34px;
+    padding:0;
+    background:transparent;
+    color:#94a3b8;
+    font-size:24px;
+    line-height:1;
+}
+
+.ios-install-close:hover,
+.ios-install-close:focus-visible { color:#fff; background:#334155; }
+
 
 @media (max-width: 600px) {
     .main-layout {
@@ -318,6 +378,14 @@ button {
 <div id="currentDate"></div>
 <div id="ramadanDay"></div>
 
+<aside id="iosInstallGuide" class="ios-install-guide" aria-labelledby="iosInstallTitle">
+ <button class="ios-install-close" type="button" aria-label="Dismiss install instructions" onclick="dismissIosInstallGuide()">&times;</button>
+ <strong id="iosInstallTitle">Install this app on your iPad</strong>
+ <p>In Safari, tap the Share button
+  <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V3m0 0L8 7m4-4 4 4M7 10H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2"/></svg></span>
+  then choose <b>Add to Home Screen</b>, and tap <b>Add</b>.</p>
+</aside>
+
 <div id="loading">Detecting your location...</div>
 
 <div class="main-layout">
@@ -349,6 +417,31 @@ button {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js');
 }
+
+function isIosDevice() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+}
+
+function isRunningAsInstalledApp() {
+  return window.navigator.standalone === true ||
+    window.matchMedia("(display-mode: standalone)").matches;
+}
+
+function showIosInstallGuide() {
+  var dismissed = false;
+  try { dismissed = sessionStorage.getItem("iosInstallGuideDismissed") === "true"; } catch (e) {}
+  if (isIosDevice() && !isRunningAsInstalledApp() && !dismissed) {
+    document.getElementById("iosInstallGuide").classList.add("visible");
+  }
+}
+
+function dismissIosInstallGuide() {
+  document.getElementById("iosInstallGuide").classList.remove("visible");
+  try { sessionStorage.setItem("iosInstallGuideDismissed", "true"); } catch (e) {}
+}
+
+showIosInstallGuide();
 
 const fallbackData = [
 {day:1,date:"2026-02-18",sehri:"05:29",aftar:"17:26"},
